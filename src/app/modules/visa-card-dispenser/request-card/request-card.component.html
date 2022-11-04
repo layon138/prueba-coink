@@ -8,7 +8,7 @@
     <form action=""  [formGroup]="filterForm">
         <div class="finder-flex">
             <span class="p-input-icon-left">
-                <i class="pi pi-user"></i>
+                <i class="pi pi-search"></i>
                 <input type="text" name="filterSentence" class="form-control" pInputText  formControlName="filterSentence" >    
             </span>
          
@@ -23,8 +23,8 @@
         </div>
         <div class="filters-flex">
             <div class="text-form">
-                <label>Usuario</label>
-                <input type="text" name="filterName" placeholder="usuario" class="form-control" pInputText uppercase formControlName="filterName" >
+                <label>Nombre</label>
+                <input type="text" name="filterName" placeholder="Buscar nombre" class="form-control" pInputText uppercase formControlName="filterName" >
                 <div class="validation-errors">
                     <ng-container *ngFor="let validation of validation_messages.filterName">
                       <div class="error-message"
@@ -35,8 +35,8 @@
                   </div>
             </div>
             <div class="text-form">
-                <label>Fechas</label>
-                <input type="text" name="origen"  placeholder="dd/mm/yyyy" class="form-control" pInputText  formControlName="filterDate" >
+                <label>Tipo</label>
+                <input type="text" name="origen"  placeholder="Buscar Tipo" class="form-control" pInputText  formControlName="filterDate" >
                 <div class="validation-errors">
                     <ng-container *ngFor="let validation of validation_messages.filterDate">
                       <div class="error-message"
@@ -64,10 +64,10 @@
         [value]="listOfCharacters" >
           <ng-template pTemplate="header">
               <tr>
-                  <th>Usuarios</th>
-                  <th>No de tarjetas de solictantes</th>
-                  <th>Fecha-Hora</th>
-                  <th>Estado</th>
+                  <th>Nombre</th>
+                  <th>Genero</th>
+                  <th>Tipo</th>
+                  <th>Foto</th>
               </tr>
           </ng-template>
           <ng-template pTemplate="body" let-character>
