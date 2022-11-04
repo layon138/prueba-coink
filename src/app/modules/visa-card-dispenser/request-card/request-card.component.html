@@ -1,0 +1,86 @@
+<div class="main-box">
+    <div class="menu-list">
+        <label for="">Tarjeta Dispensadora / <span >Solicitar Tarjeta</span></label>
+    </div>
+    <div class="tittle-flex">
+      <h2>Solicitar Tarjeta</h2>
+    </div>
+    <form action=""  [formGroup]="filterForm">
+        <div class="finder-flex">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" name="filterSentence" class="form-control" pInputText  formControlName="filterSentence" >    
+            </span>
+         
+            <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.filterSentence">
+                  <div class="error-message"
+                    *ngIf="filterForm.get('filterSentence')?.hasError(validation.type) && (filterForm.get('filterSentence')?.dirty || filterForm.get('filterSentence')?.touched )">
+                    {{ validation.message }}
+                  </div>
+                </ng-container>
+              </div>
+        </div>
+        <div class="filters-flex">
+            <div class="text-form">
+                <label>Usuario</label>
+                <input type="text" name="filterName" placeholder="usuario" class="form-control" pInputText uppercase formControlName="filterName" >
+                <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validation_messages.filterName">
+                      <div class="error-message"
+                        *ngIf="filterForm.get('filterName')?.hasError(validation.type) && (filterForm.get('filterName')?.dirty || filterForm.get('filterName')?.touched )">
+                        {{ validation.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+            </div>
+            <div class="text-form">
+                <label>Fechas</label>
+                <input type="text" name="origen"  placeholder="dd/mm/yyyy" class="form-control" pInputText uppercase formControlName="filterDate" >
+                <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validation_messages.filterDate">
+                      <div class="error-message"
+                        *ngIf="filterForm.get('filterDate')?.hasError(validation.type) && (filterForm.get('filterDate')?.dirty || filterForm.get('filterDate')?.touched )">
+                        {{ validation.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+            </div>
+        </div>
+     
+        <div class="flex-button">
+            <button pButton type="button" class="p-button-raised-secondary" (click)="clearAllFilters()" label="Limpiar Filtro" ></button>
+            <button pButton type="button"   class="p-button-raised-primary" (click)="searchCharacters()"  label="Buscar" ></button>
+        </div>
+    </form>
+    <div class="boton-solicitar">
+ 
+            <button pButton type="button"   class="p-button-raised-secondary"  label="Solicitar Tarjeta" ></button>
+       
+    </div>
+   
+    <div>
+        <p-table [scrollable]="true"  scrollHeight="600px" scrollDirection="both"
+        [value]="listOfCharacters" >
+          <ng-template pTemplate="header">
+              <tr>
+                  <th>Usuarios</th>
+                  <th>No de tarjetas de solictantes</th>
+                  <th>Fecha-Hora</th>
+                  <th>Estado</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-character>
+              <tr>
+                  <td>{{character?.name}}</td>
+                  <td>{{character?.gender}}</td>
+                  <td>{{character?.type}}</td>
+                  <td>
+                      <img [src]="character?.image" style="width: 50px;height: 50px;" alt="">
+                  </td>
+              </tr>
+          </ng-template>
+      </p-table>
+    </div>
+</div>
+

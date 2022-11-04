@@ -17,8 +17,9 @@
         }
         .tittle{
             text-align: center;
-            font-size: 16px;
+            font-size: 20px;
             letter-spacing: 0px;
+            font-weight: 400;
             color: #FFFFFF;
             margin: 0;
         }
@@ -60,4 +61,35 @@
             overflow-y: scroll;
         }
     }
+}
+
+::ng-deep.p-button:enabled:hover {
+    background: #004B40;
+    color: #ffffff;
+    border-color: #004B40;
+}
+
+::ng-deep.p-datatable .p-datatable-thead > tr > th {
+    background: #004B40;
+    color: #ffffff;
+    width: 25%;
+}
+
+::ng-deep.p-datatable .p-datatable-tbody > tr{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+::ng-deep.p-datatable .p-datatable-tbody > tr > td{
+    width: 25%;
+}
+
+::ng-deep.p-inputtext{
+    background: transparent;
+    border-bottom: 1px solid #ced4da;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    padding-left: 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
 }

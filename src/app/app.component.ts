@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  showSidebar=true
   title = 'angular-web-component';
+
+  closeSidebar(){
+    this.showSidebar=!this.showSidebar
+  }
 }

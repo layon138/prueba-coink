@@ -1,18 +1,22 @@
 <div class="content-System">
-    <div class="content-Sidebar">
-          <div class="navbar-from-sidebar">
-              <img src="assets/logo.png" alt="">
-          </div>
-    </div>
+    <div class="content-Sidebar" >
+    <p-sidebar [(visible)]="showSidebar" [modal]="false" appendTo="body">
+     
+            <div class="navbar-from-sidebar">
+                <img src="assets/logo.png" alt="">
+            </div>
+     
+    </p-sidebar>
+</div>
     <div class="content-body" >
      
         <div class="content-Navbar">
-            <em class="pi pi-align-justify"></em>
+            <em (click)="closeSidebar()" class="pi pi-align-justify"></em>
             <h1 class="tittle">BACKOFFICE</h1>
             <em class="pi pi-user"></em>
         </div>
         <div class="contente-views" >
-            
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

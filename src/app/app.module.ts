@@ -10,16 +10,13 @@ import { CookieService } from 'ngx-cookie-service';
 import {InputTextModule} from 'primeng/inputtext';
 import { ConfirmPopupModule} from 'primeng/confirmpopup';
 import { DialogModule } from 'primeng/dialog';
-import { FlightsListComponent, UppercaseInputDirective } from './pages/flights-list/flights-list.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { TableModule } from 'primeng/table';
+import {SidebarModule} from 'primeng/sidebar';
 import {DropdownModule} from 'primeng/dropdown';
+import { VisaCardDispenserModule } from './modules/visa-card-dispenser/visa-card-dispenser.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FlightsListComponent,
-    UppercaseInputDirective
   ],
   imports: [
     BrowserModule,
@@ -31,9 +28,10 @@ import {DropdownModule} from 'primeng/dropdown';
     ConfirmPopupModule,
     InputTextModule,
     ButtonModule,
-    TableModule,
+    SidebarModule,
     DropdownModule,
-    ReactiveFormsModule
+    VisaCardDispenserModule,
+
   ],
   providers: [
     CookieService

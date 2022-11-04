@@ -1,13 +1,13 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
-import { DataService } from './data.service';
+import { RickAndMortyService } from './rick-morty.service';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from '../../environments/environment';
 import { HttpErrorResponse } from '@angular/common/http';
 describe('DataService', () => {
-  let service: DataService;
+  let service: RickAndMortyService;
   let httpMock: HttpTestingController;
 
   let requestNotification={
