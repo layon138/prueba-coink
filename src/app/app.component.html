@@ -1,16 +1,18 @@
 <div class="content-System">
-    <div class="content-Sidebar" >
-    <p-sidebar [(visible)]="showSidebar" [modal]="false" appendTo="body">
-     
-            <div class="navbar-from-sidebar">
-                <img src="assets/logo.png" alt="">
-            </div>
-     
-    </p-sidebar>
-</div>
+<p-sidebar [(visible)]="showSidebar"  [style]="{width:'241px'}" [showCloseIcon]="false">
+    <div class="navbar-from-sidebar">
+        <img src="assets/logo.png" alt="">
+    </div>
+    <div class="profile-flex">
+        <div class="user-profile"> </div>
+        <label for=""><em class="pi pi-lock"></em>Julian Vargas</label>
+    </div>
+    <p-panelMenu [model]="items"  [style]="{'width':'100%'}"></p-panelMenu>
+</p-sidebar>
+
     <div class="content-body" >
      
-        <div class="content-Navbar">
+        <div class="content-Navbar" *ngIf="!this.router.url.includes('auth')" >
             <em (click)="closeSidebar()" class="pi pi-align-justify"></em>
             <h1 class="tittle">BACKOFFICE</h1>
             <em class="pi pi-user"></em>

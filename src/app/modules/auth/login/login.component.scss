@@ -1,0 +1,152 @@
+.grid-login{
+    display: grid;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 100%;
+    }
+
+    @media (min-width: 480px+1) {
+        grid-template-columns: 40% 60%;
+    }
+   
+    .div-info{
+        background: #001B24;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 16px;
+        h1{
+            width: 302px;
+            font-weight: bold;
+            font-size: 32px;
+            text-align: center;
+            letter-spacing: 0px;
+            color: #C4F6DC;
+            opacity: 1;
+        }
+        .img1{
+            width: 348px;
+            height: 280px;
+        }
+        h2{
+            font:  normal bold 24px;
+            text-align: center;
+            letter-spacing: 0px;
+            color: #C4F6DC;
+            opacity: 1;
+        }
+        .img2{
+            width: 325px;
+            height: 219px;
+        }
+    }
+    .flex-form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 8px;
+        .inscribir{
+            display: flex;
+            text-align: end;
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 360px;
+            label{
+                letter-spacing: var(--unnamed-character-spacing-0);
+                text-align: center;
+                font-size: 16px;
+                letter-spacing: 0px;
+                color: #001B24;
+                opacity: 1;
+            }
+        }
+        .flex-logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            .olvidar{
+                letter-spacing: var(--unnamed-character-spacing-0);
+                font-size:  14px;
+                letter-spacing: 0px;
+                color: #001B24;
+                opacity: 1;
+            }
+            h5{
+                letter-spacing: var(--unnamed-character-spacing-0);
+                text-align: center;
+                font-size: 23px;
+                font-weight: bold;
+                letter-spacing: 0px;
+                color: #001B24;
+                opacity: 1;
+            }
+        }
+        form{
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+
+            @media (min-width: 480px+1) {
+                width: 360px;
+            }
+        }
+        .card-body{
+          
+
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+
+            @media (min-width: 480px+1) {
+                width: 360px;
+            }
+   
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 36px;
+        label{
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 0px;
+            color: #212121;
+            opacity: 1;
+            margin-bottom: 6px;
+        }
+        ::ng-deep.p-inputtext{
+            width: 100%;
+            height: 48px;
+            background: var(--white) 0% 0% no-repeat padding-box;
+            border: 1px solid var(--gris-líneas);
+            background: #FDFDFD 0% 0% no-repeat padding-box;
+            border: 1px solid #BDBDBD;
+            border-radius: 6px;
+            opacity: 1;
+            padding-left: 8px;
+        }
+    
+        }
+    }
+   
+}
+
+.p-button-rounded-primary {
+    background: #004B40;
+    color: #FFFFFF;
+    border-color: #004B40;
+    border-radius: 100px;
+    text-align: center;
+    margin: 0;
+    width: 158px;
+    height: 40px;
+    font-weight: bold;
+    align-items: center;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+}
+

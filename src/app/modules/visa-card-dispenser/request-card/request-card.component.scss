@@ -26,7 +26,14 @@
     .text-form{
         display: flex;
         flex-direction: column;
-        width: 180px;
+        @media (max-width: 480px) {
+            width: 150px;
+        }
+
+        @media (min-width: 480px+1) {
+            width: 180px;
+        }
+   
         margin-right: 16px;
         label{
             color:#000000;

@@ -8,7 +8,7 @@
     <form action=""  [formGroup]="filterForm">
         <div class="finder-flex">
             <span class="p-input-icon-left">
-                <i class="pi pi-search"></i>
+                <i class="pi pi-user"></i>
                 <input type="text" name="filterSentence" class="form-control" pInputText  formControlName="filterSentence" >    
             </span>
          
@@ -36,7 +36,7 @@
             </div>
             <div class="text-form">
                 <label>Fechas</label>
-                <input type="text" name="origen"  placeholder="dd/mm/yyyy" class="form-control" pInputText uppercase formControlName="filterDate" >
+                <input type="text" name="origen"  placeholder="dd/mm/yyyy" class="form-control" pInputText  formControlName="filterDate" >
                 <div class="validation-errors">
                     <ng-container *ngFor="let validation of validation_messages.filterDate">
                       <div class="error-message"
